@@ -1,0 +1,10 @@
+{
+  "name": "antriom-advisory-site",
+  "version": "1.0.0",
+  "description": "Antriom Advisory marketing site",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node scripts/validate.js"
+  }
+}
