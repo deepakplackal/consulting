@@ -38,7 +38,7 @@ img {
 }
 
 .site-header {
-  background: #ffffff;
+  background: #fefefe;
   padding: 24px clamp(24px, 4vw, 48px) 80px;
 }
 
