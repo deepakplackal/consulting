@@ -468,6 +468,152 @@ img {
   color: #a8b4c4;
 }
 
+/* ── Service tiers ───────────────────────────────── */
+
+.service-tier {
+  max-width: var(--wide-width);
+  margin: 0 auto 48px;
+}
+
+.service-tier:last-child {
+  margin-bottom: 0;
+}
+
+.tier-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: #4a5465;
+  font-weight: 500;
+}
+
+.tier-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.tier-label.senior .tier-badge {
+  background: var(--deep-green);
+  color: #fff;
+}
+
+.tier-label.team .tier-badge {
+  background: var(--gold);
+  color: var(--slate);
+}
+
+/* ── Leadership ─────────────────────────────────── */
+
+.leadership-layout {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.leader-card,
+.team-card {
+  padding: 36px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(15, 20, 34, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--deep-green), var(--gold));
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--gold);
+}
+
+.leader-info h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.4rem;
+  color: var(--slate);
+  margin-bottom: 4px;
+}
+
+.leader-title {
+  color: var(--deep-green);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.5px;
+}
+
+.leader-bio {
+  margin-top: 18px;
+  color: #4a5465;
+  line-height: 1.7;
+}
+
+.leader-handles {
+  margin-top: 24px;
+}
+
+.leader-handles h4 {
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--deep-green);
+  margin-bottom: 12px;
+}
+
+.handle-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.handle-tags span {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: rgba(26, 79, 138, 0.08);
+  color: var(--deep-green);
+  border: 1px solid rgba(26, 79, 138, 0.12);
+}
+
+.handle-tags.team-tags span {
+  background: rgba(212, 168, 67, 0.1);
+  color: var(--slate);
+  border-color: rgba(212, 168, 67, 0.2);
+}
+
+.team-card h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.2rem;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.team-card > p {
+  color: #4a5465;
+  line-height: 1.7;
+}
+
 @media (min-width: 1440px) {
   .hero {
     min-height: calc(100vh - 180px);
@@ -505,7 +651,8 @@ img {
 
 @media (max-width: 920px) {
   .hero,
-  .contact-wrapper {
+  .contact-wrapper,
+  .leadership-layout {
     grid-template-columns: 1fr;
   }
 
